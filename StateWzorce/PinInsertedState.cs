@@ -9,23 +9,19 @@ namespace StateWzorce
     public class PinInsertedState : State
     {
         public PinInsertedState(ATMContext context) : base(context) { }
-
         public override void InsertCard()
         {
             Console.WriteLine("Karta już jest włożona.");
         }
-
         public override void EjectCard()
         {
             Console.WriteLine("Karta została wyjęta.");
             context.ChangeState(new NoCardState(context));
         }
-
         public override void InsertPin(int pin)
         {
             Console.WriteLine("PIN został już wprowadzony.");
         }
-
         public override void WithdrawCash(int amount)
         {
             if (context.CashInMachine <= 0)

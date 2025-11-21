@@ -10,7 +10,6 @@ namespace StateWzorce
     {
         private State currentState;
         public int CashInMachine { get; set; }
-
         public ATMContext(int initialCash)
         {
             CashInMachine = initialCash;
@@ -20,12 +19,10 @@ namespace StateWzorce
             else
                 currentState = new NoCashState(this);
         }
-
         public void ChangeState(State newState)
         {
             currentState = newState;
         }
-
         public void InsertCard() => currentState.InsertCard();
         public void EjectCard() => currentState.EjectCard();
         public void InsertPin(int pin) => currentState.InsertPin(pin);
