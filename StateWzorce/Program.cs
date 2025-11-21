@@ -1,4 +1,4 @@
-﻿using StateWzorce;
+﻿using StateWzorce.Context;
 class Program
 {
     static void Main()

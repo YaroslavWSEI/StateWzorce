@@ -1,10 +1,11 @@
-﻿using System;
+﻿using StateWzorce.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StateWzorce
+namespace StateWzorce.States
 {
     public class PinInsertedState : State
     {
